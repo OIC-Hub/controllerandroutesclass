@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\users\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/about', [PagesController::class, 'about']);
-
 Route::get('/about/{name}/{id}', function ($name, $key) {
     return "Welcome to laravel $name $key. Laravel is a modern day PHP framework";
 });
+Route::get('/users/dashboard', [UsersController::class, 'index']);
