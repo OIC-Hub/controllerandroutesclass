@@ -19,7 +19,7 @@ use App\Http\Controllers\users\UsersController;
 //     return view('about');
 // });
 
-Route::get('/', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index'])->name('home');
 Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/about/{name}/{id}', function ($name, $key) {
